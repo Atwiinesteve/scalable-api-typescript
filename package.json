@@ -7,7 +7,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --import=tsx --env-file=.env --watch src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +18,14 @@
   "packageManager": "pnpm@10.4.1",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "drizzle-orm": "^0.40.1",
+    "express": "^4.21.2",
+    "pg": "^8.14.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.5",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   }
