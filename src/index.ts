@@ -4,6 +4,8 @@ import productsRouter from "./routes/products.route";
 const app = express();
 const PORT = process.env.PORT || 4040;
 
+app.use(express.json())
+
 app.use("/products", productsRouter);
 
 app.get("/test", (request: Request, response: Response) => {
